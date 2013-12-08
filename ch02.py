@@ -1,11 +1,10 @@
-
 import sys
 import math
 
 r = 0.6
 k = float( sys.argv[1] ) # 50..175
 
-print "r=%f\tk=%f\n" % ( r, k ); t=0
+print "r=%f\tk=%f\n" % ( r, k );
 print r, 0, 0, 0, 0
 
 def cache( size ):
