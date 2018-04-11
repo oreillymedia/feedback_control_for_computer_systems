@@ -16,4 +16,4 @@ scripts = [file for file in os.listdir() if fnmatch.fnmatch(file, 'ch*.py')]
 
 for script in scripts:
     print('Running: ' + script)
-    os.system('python {} > {}'.format(script, DIR + script + SUFFIX))
+    os.system('python {} > {}'.format(script, DIR + script.replace('.py', SUFFIX)))
