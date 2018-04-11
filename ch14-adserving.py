@@ -93,7 +93,7 @@ def specialsteptest():
         y = p.work( u )
         z = f.work( y )
 
-        print t, t*fb.DT, r, 0, u, u, y, z, p.monitoring()
+        print( t, t*fb.DT, r, 0, u, u, y, z, p.monitoring())
         
     quit()
     
@@ -103,12 +103,12 @@ if __name__ == '__main__':
 
     fb.DT = 1
 
-#   statictest()
+    #statictest()
 
-#    closedloop( 0.5, 0.25 ) # default
-#    closedloop( 0.0, 0.25 ) # w/o prop ctrl
-#    closedloop( 0.0, 1.75 )  # ringing
-    
-#    closedloop( 1.0, 0.125, fb.RecursiveFilter(0.125) ) # 
-        
-#    closedloop_accumul( 0.5, 0.125 )
+    closedloop( 0.5, 0.25 ) # default
+    closedloop( 0.0, 0.25 ) # w/o prop ctrl
+    closedloop( 0.0, 1.75 )  # ringing
+
+    closedloop( 1.0, 0.125, fb.RecursiveFilter(0.125) ) #
+
+    closedloop_accumul( 0.5, 0.125 )
