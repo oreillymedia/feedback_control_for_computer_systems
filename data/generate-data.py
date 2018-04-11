@@ -9,10 +9,11 @@ Generate data from example code and store in files for analysis.
 import os
 import fnmatch
 
+DIR = 'data/'
 SUFFIX = '.data'
 
 scripts = [file for file in os.listdir() if fnmatch.fnmatch(file, 'ch*.py')]
 
 for script in scripts:
     print('Running: ' + script)
-    os.system('python {} > {}'.format(script, script + SUFFIX))
+    os.system('python {} > {}'.format(script, DIR + script + SUFFIX))
