@@ -258,7 +258,7 @@ def static_test( plant_ctor, ctor_args, umax, steps, repeats, tmax ):
             for t in range( tmax ):
                 y = p.work(u)
 
-            print u, y
+            print(u, y)
             
     quit()
 
@@ -268,7 +268,7 @@ def step_response( setpoint, plant, tm=5000 ):
         u = r
         y = plant.work( u )
 
-        print t, t*DT, r, 0, u, u, y, y, plant.monitoring()
+        print(t, t*DT, r, 0, u, u, y, y, plant.monitoring())
         
     quit()
 
@@ -278,7 +278,7 @@ def open_loop( setpoint, controller, plant, tm=5000 ):
         u = controller.work( r )
         y = plant.work( u )
 
-        print t, t*DT, r, 0, u, u, y, y, plant.monitoring()
+        print(t, t*DT, r, 0, u, u, y, y, plant.monitoring())
 
     quit()
 
@@ -294,7 +294,7 @@ def closed_loop( setpoint, controller, plant, tm=5000, inverted=False,
         y = plant.work(v)
         z = returnfilter.work(y)
 
-        print t, t*DT, r, e, u, v, y, z, plant.monitoring()
+        print(t, t*DT, r, e, u, v, y, z, plant.monitoring())
 
     quit()
 
